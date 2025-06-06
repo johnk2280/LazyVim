@@ -22,6 +22,7 @@ autocmd("FileType", {
     pattern = "*",
     group = colorcolumn,
     callback = function()
+        -- vim.cmd("highlight ColorColumn ctermbg=0 guibg=Black")
         if vim.bo.filetype == "python" then
             vim.opt.colorcolumn = python_width
         elseif
