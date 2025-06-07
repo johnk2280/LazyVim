@@ -1,4 +1,5 @@
 return {
+    -- =================================================================================================================
     -- {
     --     "folke/tokyonight.nvim",
     --     opts = {
@@ -9,6 +10,9 @@ return {
     --         },
     --     },
     -- },
+    --
+    -- =================================================================================================================
+    --
     -- {
     --     "datsfilipe/vesper.nvim",
     --     config = function()
@@ -32,13 +36,82 @@ return {
     --         colorscheme = "vesper",
     --     },
     -- },
-
+    --  =================================================================================================================
+    -- {
+    --     "sontungexpt/witch",
+    --     priority = 1000,
+    --     lazy = false,
+    --     config = function(_, opts)
+    --         -- require("witch").setup(require("plugins.colorschemes.witch"))
+    --         require("witch").setup(opts)
+    --     end,
+    -- },
+    --
+    -- =================================================================================================================
+    --
+    -- {
+    --     "everviolet/nvim",
+    --     name = "evergarden",
+    --     priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+    --     opts = {
+    --         theme = {
+    --             variant = "winter", -- 'winter'|'fall'|'spring'|'summer'
+    --             accent = "green",
+    --         },
+    --         editor = {
+    --             transparent_background = true,
+    --             sign = { color = "none" },
+    --             float = {
+    --                 color = "mantle",
+    --                 invert_border = false,
+    --             },
+    --             completion = {
+    --                 color = "surface0",
+    --             },
+    --         },
+    --     },
+    -- },
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "evergarden",
+    --     },
+    -- },
+    -- =================================================================================================================
+    -- {
+    --     "sainnhe/sonokai",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         -- Optionally configure and load the colorscheme
+    --         -- directly inside the plugin declaration.
+    --         vim.g.sonokai_enable_italic = true
+    --         vim.cmd.colorscheme("sonokai")
+    --     end,
+    -- },
+    -- =================================================================================================================
+    { "xiantang/darcula-dark.nvim" },
     {
-        "sontungexpt/witch",
-        priority = 1000,
-        lazy = false,
-        config = function(_, opts)
-            require("witch").setup(require("plugins.colorschemes.witch"))
-        end,
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "darcula-dark",
+        },
     },
+    -- -- =================================================================================================================
+    -- { "Carcuis/darcula.nvim" },
+    --
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "darcula",
+    --     },
+    -- },
+    -- =================================================================================================================
+    -- { "tallestlegacy/darcula.nvim" },
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "darcula",
+    --     },
+    -- },
 }
