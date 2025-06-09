@@ -52,5 +52,8 @@ return {
                 "**/.eslintignore",
             },
         },
+        indent = {
+            enabled = false,
+        },
     },
 }
