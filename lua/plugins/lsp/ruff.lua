@@ -80,12 +80,17 @@ return {
                 "TD003",
                 "RUF003",
                 "TID252",
+                "DOC",
+                "FBT",
+                "S101",
+                "D203",
             },
             fixable = {
                 "COM",
                 "F401",
                 "FA102",
                 "I",
+                "W",
             },
         },
         format = {
