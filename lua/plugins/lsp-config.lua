@@ -12,7 +12,6 @@ return {
             css_variables = require("plugins.lsp.css_variables"),
             cssls = require("plugins.lsp.cssls"),
             -- cssmodules_ls = require("plugins.lsp.cssmodules_ls"),
-            eslint = require("plugins.lsp.eslint"),
         },
     },
 }
