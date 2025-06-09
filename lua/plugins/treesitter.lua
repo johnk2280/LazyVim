@@ -19,6 +19,7 @@ return {
             "htmldjango",
             "javascript",
             "json",
+            "json5",
             "nginx",
             "python",
             "regex",
