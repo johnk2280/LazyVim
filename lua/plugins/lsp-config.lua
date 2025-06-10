@@ -14,6 +14,7 @@ return {
             cssmodules_ls = require("plugins.lsp.cssmodules_ls"),
 
             bashls = {},
+            rust_analyzer = {},
         },
     },
 }

@@ -33,8 +33,6 @@ return {
             "typescript",
             "vue",
             "yaml",
-      "http",
-      "graphql",
         },
     },
 }

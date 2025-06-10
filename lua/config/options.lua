@@ -4,22 +4,28 @@
 
 local opt = vim.opt
 
+opt.fillchars = {
+    foldopen = "",
+    foldclose = "",
+    fold = " ",
+    foldsep = " ",
+    diff = "╱",
+    eob = " ",
+}
+
 -- opt.fillchars = {
---     foldopen = "",
---     foldclose = "",
---     fold = " ",
---     foldsep = " ",
---     diff = "╱",
---     eob = " ",
+--     vert = "│",
+--     fold = "⠀",
+--     eob = " ", -- suppress ~ at EndOfBuffer
+--     -- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
+--     msgsep = "‾",
+--     foldopen = "▾",
+--     foldsep = "│",
+--     foldclose = "▸",
 -- }
 
-opt.fillchars = {
-    vert = "│",
-    fold = "⠀",
-    eob = " ", -- suppress ~ at EndOfBuffer
-    -- diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
-    msgsep = "‾",
-    foldopen = "▾",
-    foldsep = "│",
-    foldclose = "▸",
-}
+-- LSP Server to use for Python.
+-- Set to "basedpyright" to use basedpyright instead of pyright.
+vim.g.lazyvim_python_lsp = "pyright"
+-- Set to "ruff_lsp" to use the old LSP implementation version.
+vim.g.lazyvim_python_ruff = "ruff"
