@@ -18,25 +18,25 @@ local python_width = "79"
 local ts_width = "120"
 local other_width = "120"
 
--- autocmd("FileType", {
---     pattern = "*",
---     group = colorcolumn,
---     callback = function()
---         -- vim.cmd("highlight ColorColumn ctermbg=0 guibg=Black")
---         if vim.bo.filetype == "python" then
---             vim.opt.colorcolumn = python_width
---         elseif
---             vim.bo.filetype == "javascript"
---             or vim.bo.filetype == "typescript"
---             or vim.bo.filetype == "typescriptreact"
---             or vim.bo.filetype == "javascriptreact"
---         then
---             vim.opt.colorcolumn = ts_width
---         else
---             vim.opt.colorcolumn = other_width
---         end
---     end,
--- })
+autocmd("FileType", {
+    pattern = "*",
+    group = colorcolumn,
+    callback = function()
+        -- vim.cmd("highlight ColorColumn ctermbg=0 guibg=Black")
+        if vim.bo.filetype == "python" then
+            vim.opt.colorcolumn = python_width
+        elseif
+            vim.bo.filetype == "javascript"
+            or vim.bo.filetype == "typescript"
+            or vim.bo.filetype == "typescriptreact"
+            or vim.bo.filetype == "javascriptreact"
+        then
+            vim.opt.colorcolumn = ts_width
+        else
+            vim.opt.colorcolumn = other_width
+        end
+    end,
+})
 
 -- Auto save when focus is lost, buffer leave, INSERT mode leave
 autocmd({ "FocusLost", "BufLeave", "InsertLeave" }, {
