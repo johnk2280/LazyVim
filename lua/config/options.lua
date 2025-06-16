@@ -68,3 +68,8 @@ vim.g.lazyvim_eslint_auto_format = true
 -- Alternatively, you can also use other methods to inject your environment variables.
 
 -- Finally, please make sure to add `.lazy.lua` to your `.gitignore` file to protect your secrets.
+
+-- ================================================================
+-- In case you don't want to use `:LazyExtras`,
+-- then you need to set the option below.
+vim.g.lazyvim_picker = "telescope"
