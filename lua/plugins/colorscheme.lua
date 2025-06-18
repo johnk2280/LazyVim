@@ -1,18 +1,32 @@
 return {
     -- =================================================================================================================
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        opts = {
-            transparent_background = true,
-        },
+        "askfiy/visual_studio_code",
+        priority = 100,
+        config = function()
+            vim.cmd([[colorscheme visual_studio_code]])
+        end,
     },
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "catppuccin",
+            colorscheme = "visual_studio_code",
         },
     },
+    -- =================================================================================================================
+    -- {
+    --     "catppuccin/nvim",
+    --     name = "catppuccin",
+    --     opts = {
+    --         transparent_background = true,
+    --     },
+    -- },
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "catppuccin",
+    --     },
+    -- },
     -- =================================================================================================================
     -- =================================================================================================================
     -- {
