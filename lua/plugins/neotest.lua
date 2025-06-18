@@ -9,7 +9,7 @@ return {
             ["neotest-python"] = {
                 runner = "pytest",
                 python = ".venv/bin/python",
-                args = { "--verbose", "--no-header", "-vv" },
+                args = { "--verbose", "--no-header", "-vv", "--cov" },
                 pytest_discover_instances = true,
             },
         },

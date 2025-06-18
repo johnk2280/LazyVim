@@ -1,5 +1,20 @@
 return {
     -- =================================================================================================================
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        opts = {
+            transparent_background = true,
+        },
+    },
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "catppuccin",
+        },
+    },
+    -- =================================================================================================================
+    -- =================================================================================================================
     -- {
     --     "folke/tokyonight.nvim",
     --     opts = {
@@ -90,29 +105,15 @@ return {
     --     end,
     -- },
     -- =================================================================================================================
-    {
-        "xiantang/darcula-dark.nvim",
-        config = function()
-            -- setup must be called before loading
-            require("darcula").setup({
-                opt = {
-                    integrations = {
-                        telescope = false,
-                        lualine = true,
-                        lsp_semantics_token = true,
-                        nvim_cmp = true,
-                        dap_nvim = true,
-                    },
-                },
-            })
-        end,
-    },
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "darcula-dark",
-        },
-    },
+    -- {
+    --     "xiantang/darcula-dark.nvim",
+    -- },
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "darcula-dark",
+    --     },
+    -- },
     -- -- =================================================================================================================
     -- { "Carcuis/darcula.nvim" },
     --
