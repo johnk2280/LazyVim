@@ -39,14 +39,14 @@ autocmd("FileType", {
 })
 
 -- Auto save when focus is lost, buffer leave, INSERT mode leave
--- autocmd({ "FocusLost", "BufLeave", "InsertLeave" }, {
---     pattern = "*",
---     group = buffer_autosave,
---     callback = function()
---         if vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" then
---             vim.cmd("write")
---         end
---     end,
---     -- command = "silent! wa",
---     desc = "Auto save when focus is lost, buffer left, INSERT mode left",
--- })
+autocmd({ "FocusLost", "BufLeave", "InsertLeave" }, {
+    pattern = "*",
+    group = buffer_autosave,
+    callback = function()
+        if vim.bo.buftype == "" and vim.bo.modified and not vim.bo.readonly and vim.fn.expand("%") ~= "" then
+            vim.cmd("write")
+        end
+    end,
+    -- command = "silent! wa",
+    desc = "Auto save when focus is lost, buffer left, INSERT mode left",
+})

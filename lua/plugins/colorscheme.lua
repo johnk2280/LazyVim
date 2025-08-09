@@ -32,7 +32,7 @@ return {
     --         colorscheme = "visual_studio_code",
     --     },
     -- },
-    -- =================================================================================================================
+    -- -- =================================================================================================================
     -- {
     --     "catppuccin/nvim",
     --     name = "catppuccin",
@@ -138,29 +138,29 @@ return {
     --     end,
     -- },
     -- =================================================================================================================
-    {
-        "xiantang/darcula-dark.nvim",
-        config = function()
-            -- setup must be called before loading
-            require("darcula").setup({
-                opt = {
-                    integrations = {
-                        telescope = false,
-                        -- lualine = true,
-                        -- lsp_semantics_token = true,
-                        -- nvim_cmp = true,
-                        -- dap_nvim = true,
-                    },
-                },
-            })
-        end,
-    },
-    {
-        "LazyVim/LazyVim",
-        opts = {
-            colorscheme = "darcula-dark",
-        },
-    },
+    -- {
+    --     "xiantang/darcula-dark.nvim",
+    --     config = function()
+    --         -- setup must be called before loading
+    --         require("darcula").setup({
+    --             opt = {
+    --                 integrations = {
+    --                     telescope = false,
+    --                     -- lualine = true,
+    --                     -- lsp_semantics_token = true,
+    --                     -- nvim_cmp = true,
+    --                     -- dap_nvim = true,
+    --                 },
+    --             },
+    --         })
+    --     end,
+    -- },
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "darcula-dark",
+    --     },
+    -- },
     -- -- =================================================================================================================
     -- { "Carcuis/darcula.nvim" },
     --
@@ -178,4 +178,87 @@ return {
     --         colorscheme = "darcula",
     --     },
     -- },
+    -- ================================================================================================================
+    -- {
+    --     "kyazdani42/blue-moon",
+    --     config = function()
+    --         vim.opt.termguicolors = true
+    --         vim.cmd("colorscheme blue-moon")
+    --     end,
+    -- },
+    -- =================================================================================================================
+    -- {
+    --     "glepnir/zephyr-nvim",
+    --     requires = { "nvim-treesitter/nvim-treesitter", opt = true },
+    -- },
+    --
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "zephyr",
+    --     },
+    -- },
+    -- =================================================================================================================
+    -- {
+    --     "PHSix/nvim-hybrid",
+    --     config = function()
+    --         require("hybrid").setup()
+    --         -- or use
+    --         -- vim.cmd [[colorscheme nvim-hybrid]]
+    --     end,
+    -- },
+    -- =================================================================================================================
+    -- { "savq/melange-nvim" },
+    -- {
+    --     "LazyVim/LazyVim",
+    --     opts = {
+    --         colorscheme = "melange",
+    --     },
+    -- },
+    -- =================================================================================================================
+    --  норм тема
+    {
+        "AlexvZyl/nordic.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("nordic").load({
+                transparent = {
+                    bg = true,
+                    float = true,
+                },
+                bright_border = false,
+                reduced_blue = false,
+                cursorline = {
+                    -- Bold font in cursorline.
+                    bold = false,
+                    -- Bold cursorline number.
+                    bold_number = true,
+                    -- Available styles: 'dark', 'light'.
+                    theme = "light",
+                    -- Blending the cursorline bg with the buffer bg.
+                    blend = 0.85,
+                },
+                noice = {
+                    -- Available styles: `classic`, `flat`.
+                    style = "classic",
+                },
+                telescope = {
+                    -- Available styles: `classic`, `flat`.
+                    style = "flat",
+                },
+                leap = {
+                    -- Dims the backdrop when using leap.
+                    dim_backdrop = false,
+                },
+                ts_context = {
+                    -- Enables dark background for treesitter-context window
+                    dark_background = true,
+                },
+            })
+        end,
+    },
+    -- =================================================================================================================
+    -- =================================================================================================================
+    -- =================================================================================================================
 }
