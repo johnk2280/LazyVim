@@ -33,19 +33,29 @@ return {
     --     },
     -- },
     -- -- =================================================================================================================
-    -- {
-    --     "catppuccin/nvim",
-    --     name = "catppuccin",
-    --     opts = {
-    --         transparent_background = true,
-    --     },
-    -- },
-    -- {
-    --     "LazyVim/LazyVim",
-    --     opts = {
-    --         colorscheme = "catppuccin",
-    --     },
-    -- },
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        opts = {
+            transparent_background = true,
+            float = {
+                transparent = true,
+                solid = false,
+            },
+            -- show_end_of_buffer = true,
+            dim_inactive = {
+                enabled = false, -- dims the background color of inactive window
+                shade = "dark",
+                percentage = 0.15, -- percentage of the shade to apply to the inactive window
+            },
+        },
+    },
+    {
+        "LazyVim/LazyVim",
+        opts = {
+            colorscheme = "catppuccin",
+        },
+    },
     -- =================================================================================================================
     -- =================================================================================================================
     -- {
@@ -217,48 +227,61 @@ return {
     -- },
     -- =================================================================================================================
     --  норм тема
-    {
-        "AlexvZyl/nordic.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("nordic").load({
-                transparent = {
-                    bg = true,
-                    float = true,
-                },
-                bright_border = false,
-                reduced_blue = false,
-                cursorline = {
-                    -- Bold font in cursorline.
-                    bold = false,
-                    -- Bold cursorline number.
-                    bold_number = true,
-                    -- Available styles: 'dark', 'light'.
-                    theme = "light",
-                    -- Blending the cursorline bg with the buffer bg.
-                    blend = 0.85,
-                },
-                noice = {
-                    -- Available styles: `classic`, `flat`.
-                    style = "classic",
-                },
-                telescope = {
-                    -- Available styles: `classic`, `flat`.
-                    style = "flat",
-                },
-                leap = {
-                    -- Dims the backdrop when using leap.
-                    dim_backdrop = false,
-                },
-                ts_context = {
-                    -- Enables dark background for treesitter-context window
-                    dark_background = true,
-                },
-            })
-        end,
-    },
+    -- {
+    --     "AlexvZyl/nordic.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         require("nordic").load({
+    --             transparent = {
+    --                 bg = true,
+    --                 float = true,
+    --             },
+    --             bright_border = false,
+    --             reduced_blue = false,
+    --             cursorline = {
+    --                 -- Bold font in cursorline.
+    --                 bold = false,
+    --                 -- Bold cursorline number.
+    --                 bold_number = true,
+    --                 -- Available styles: 'dark', 'light'.
+    --                 theme = "light",
+    --                 -- Blending the cursorline bg with the buffer bg.
+    --                 blend = 0.85,
+    --             },
+    --             noice = {
+    --                 -- Available styles: `classic`, `flat`.
+    --                 style = "classic",
+    --             },
+    --             telescope = {
+    --                 -- Available styles: `classic`, `flat`.
+    --                 style = "flat",
+    --             },
+    --             leap = {
+    --                 -- Dims the backdrop when using leap.
+    --                 dim_backdrop = false,
+    --             },
+    --             ts_context = {
+    --                 -- Enables dark background for treesitter-context window
+    --                 dark_background = false,
+    --             },
+    --         })
+    --     end,
+    -- },
     -- =================================================================================================================
+    -- {
+    --     "shaunsingh/nord.nvim",
+    --     config = function()
+    --         require("nord").set()
+    --         -- require("lualine").setup({
+    --         --     options = {
+    --         --         -- ... your lualine config
+    --         --         theme = "nord",
+    --         --         -- ... your lualine config
+    --         --     },
+    --         -- })
+    --     end,
+    -- },
     -- =================================================================================================================
     -- =================================================================================================================
 }
