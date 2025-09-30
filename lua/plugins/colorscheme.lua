@@ -48,21 +48,11 @@ return {
                 shade = "dark",
                 percentage = 0.15, -- percentage of the shade to apply to the inactive window
             },
+            integrations = {
+                blink_cmp = true,
+            },
         },
     },
-
-    --  Сломался бафферлайн после обновления
-    {
-        "catppuccin/nvim",
-        opts = function(_, opts)
-            local module = require("catppuccin.groups.integrations.bufferline")
-            if module then
-                module.get = module.get_theme
-            end
-            return opts
-        end,
-    },
-
     {
         "LazyVim/LazyVim",
         opts = {

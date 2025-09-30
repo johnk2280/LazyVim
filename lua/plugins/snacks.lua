@@ -50,6 +50,7 @@ return {
                 "**/.eslintrc",
                 "**/.prettierrc",
                 "**/.eslintignore",
+                "**/target",
             },
         },
         indent = {

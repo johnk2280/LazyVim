@@ -23,6 +23,11 @@ opt.fillchars = {
 --     foldsep = "│",
 --     foldclose = "▸",
 -- }
+-- ================================================================
+-- Indenting
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.softtabstop = 4
 
 -- ================================================================
 -- LSP Server to use for Python.
