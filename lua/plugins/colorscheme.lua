@@ -36,17 +36,21 @@ return {
     {
         "catppuccin/nvim",
         name = "catppuccin",
+        lazy = false,
+        priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
         opts = {
-            transparent_background = true,
+            flavour = "auto", -- latte, frappe, macchiato, mocha
+            transparent_background = true, -- disables setting the background color.
+            -- term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
             float = {
-                transparent = true,
-                solid = false,
+                transparent = true, -- enable transparent floating windows
+                solid = false, -- enable solid background for floating windows
             },
             -- show_end_of_buffer = true,
             dim_inactive = {
                 enabled = false, -- dims the background color of inactive window
                 shade = "dark",
-                percentage = 0.15, -- percentage of the shade to apply to the inactive window
+                percentage = 0.1, -- percentage of the shade to apply to the inactive window
             },
             integrations = {
                 blink_cmp = true,

@@ -1,3 +1,7 @@
+if true then
+    return {}
+end
+
 local defaultUrl = "https://devx-copilot.tech"
 local defaultModel = "gpt-5" -- Выбор модели которую будете использовать
 local devxConfigDefaultPath = vim.fn.expand("$HOME/.continue/config.json") -- Путь к конфигурации и токену

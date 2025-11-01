@@ -14,5 +14,8 @@ return {
             cssmodules_ls = require("plugins.lsp.cssmodules_ls"),
             -- eslint = require("plugins.lsp.eslint"),
         },
+        diagnostics = {
+            virtual_text = false,
+        },
     },
 }
