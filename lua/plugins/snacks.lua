@@ -1,5 +1,6 @@
 return {
     "folke/snacks.nvim",
+    ---@diagnostic disable-next-line: undefined-doc-name
     ---@type snacks.Config
     opts = {
         dashboard = {
@@ -31,6 +32,7 @@ return {
             --     **/.idea,
             -- },
             include = {
+                "**/.dockerignore",
                 "**/.gitignore",
                 "**/.gitlab**",
                 "**/.github**",
@@ -51,6 +53,7 @@ return {
                 "**/.prettierrc",
                 "**/.eslintignore",
                 "**/target",
+                "**/**rc",
             },
         },
         indent = {

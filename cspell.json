@@ -1,0 +1,13 @@
+{
+  "userWords": [
+    "softtabstop",
+    "foldsep",
+    "foldclose",
+    "spelllang",
+    "foldopen",
+    "fillchars"
+  ],
+  "words": [
+    "lazyvim"
+  ]
+}

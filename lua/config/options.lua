@@ -28,7 +28,10 @@ opt.fillchars = {
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.softtabstop = 4
-
+-- ================================================================
+-- Spelling
+opt.spell = true
+opt.spelllang = { "en_us", "ru" }
 -- ================================================================
 -- LSP Server to use for Python.
 -- Set to "basedpyright" to use basedpyright instead of pyright.
@@ -84,3 +87,4 @@ vim.g.lazyvim_picker = "telescope"
 local border = "rounded"
 
 vim.diagnostic.config({ float = { border = border } })
+vim.o.winborder = "rounded"
