@@ -5,8 +5,9 @@ return {
         ---@type lspconfig.options
         servers = {
             -- pyright will be automatically installed with mason and loaded with lspconfig
-            pyright = require("plugins.lsp.pyright"),
+            -- pyright = require("plugins.lsp.pyright"),
             ruff = require("plugins.lsp.ruff"),
+            zuban = require("plugins.lsp.zubanls"),
 
             html = require("plugins.lsp.html"),
             css_variables = require("plugins.lsp.css_variables"),
