@@ -30,8 +30,8 @@ opt.tabstop = 4
 opt.softtabstop = 4
 -- ================================================================
 -- Spelling
-opt.spell = true
-opt.spelllang = { "en_us", "ru" }
+-- opt.spell = true
+-- opt.spelllang = { "en_us", "ru" }
 -- ================================================================
 -- LSP Server to use for Python.
 -- Set to "basedpyright" to use basedpyright instead of pyright.

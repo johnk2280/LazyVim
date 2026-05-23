@@ -6,6 +6,7 @@ return {
             "shellcheck",
             "shfmt",
             "bash-language-server",
+            "codebook",
             "clangd",
             "cmakelang",
             "cmakelint",
