@@ -38,6 +38,7 @@ return {
             "vue-language-server",
             "yaml-language-server",
             "zuban",
+            "tsp-server",
         },
     },
 }

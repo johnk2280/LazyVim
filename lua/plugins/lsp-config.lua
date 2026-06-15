@@ -15,6 +15,7 @@ return {
             cssmodules_ls = require("plugins.lsp.cssmodules_ls"),
             -- eslint = require("plugins.lsp.eslint"),
             codebook = {},
+            tsp_server = {},
         },
         diagnostics = {
             virtual_text = false,
