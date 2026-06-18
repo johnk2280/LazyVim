@@ -1,21 +1,32 @@
 return {
     "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
+    init = function()
         -- Register the custom Brief parser (Avito internal grammar).
-        -- nvim-treesitter `main` branch: parsers are entries in this table.
-        -- Requires SSH access to stash.msk.avito.ru.
-        require("nvim-treesitter.parsers").brief = {
-            ---@diagnostic disable-next-line: missing-fields
-            install_info = {
-                url = "ssh://git@stash.msk.avito.ru:7999/arch/tree-sitter-brief.git",
-                -- branch = "master",  -- uncomment if the repo default branch isn't `main`
-                -- revision = "<sha>", -- pin for reproducible installs
-            },
-            tier = 3,
-        }
-
-        opts.ensure_installed = opts.ensure_installed or {}
-        vim.list_extend(opts.ensure_installed, {
+        -- Must go through a `User TSUpdate` autocmd: nvim-treesitter's `main`
+        -- branch wipes the parser table (package.loaded = nil) and fires this
+        -- event before every install/update (see install.lua `reload_parsers`),
+        -- so a one-shot registration done elsewhere is discarded.
+        vim.api.nvim_create_autocmd("User", {
+            pattern = "TSUpdate",
+            group = vim.api.nvim_create_augroup("brief_ts_parser", { clear = true }),
+            callback = function()
+                ---@diagnostic disable-next-line: missing-fields
+                require("nvim-treesitter.parsers").brief = {
+                    ---@diagnostic disable-next-line: missing-fields
+                    install_info = {
+                        url = "ssh://git@stash.msk.avito.ru:7999/arch/tree-sitter-brief.git",
+                        -- branch = "master",   -- uncomment if the repo default branch isn't `main`
+                        -- revision = "<sha>",  -- pin for reproducible installs
+                        -- generate = true,     -- only if the repo lacks a pre-generated src/parser.c
+                        -- queries = "queries", -- install highlight queries from the repo (for syntax highlighting)
+                    },
+                    tier = 3,
+                }
+            end,
+        })
+    end,
+    opts = {
+        ensure_installed = {
             "vim",
             "lua",
             "vimdoc",
@@ -48,6 +59,6 @@ return {
             "vue",
             "yaml",
             "brief",
-        })
-    end,
+        },
+    },
 }
