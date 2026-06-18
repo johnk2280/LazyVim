@@ -8,6 +8,7 @@ return {
             -- pyright = require("plugins.lsp.pyright"),
             ruff = require("plugins.lsp.ruff"),
             zuban = require("plugins.lsp.zubanls"),
+            briefls = require("plugins.lsp.briefls"),
 
             html = require("plugins.lsp.html"),
             css_variables = require("plugins.lsp.css_variables"),

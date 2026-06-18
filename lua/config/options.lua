@@ -84,6 +84,14 @@ vim.g.lazyvim_eslint_auto_format = true
 vim.g.lazyvim_picker = "telescope"
 -- ================================================================
 
+-- Register the Brief filetype (Avito `.brief` files)
+vim.filetype.add({
+    extension = {
+        brief = "brief",
+    },
+})
+-- ================================================================
+
 -- Settings for borders of floating windows
 local border = "rounded"
 
