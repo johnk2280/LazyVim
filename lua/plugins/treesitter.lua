@@ -14,11 +14,13 @@ return {
                 require("nvim-treesitter.parsers").brief = {
                     ---@diagnostic disable-next-line: missing-fields
                     install_info = {
-                        url = "ssh://git@stash.msk.avito.ru:7999/arch/tree-sitter-brief.git",
-                        -- branch = "master",   -- uncomment if the repo default branch isn't `main`
-                        -- revision = "<sha>",  -- pin for reproducible installs
+                        -- main-branch nvim-treesitter downloads parsers via curl (no ssh),
+                        -- so point at a local clone instead and it compiles from there:
+                        --   git clone ssh://git@stash.msk.avito.ru:7999/arch/tree-sitter-brief.git ~/.config/tree-sitter-parsers/tree-sitter-brief
+                        path = vim.fn.expand("~/.config/tree-sitter-parsers/tree-sitter-brief"),
+                        -- location = "parser", -- if parser.c lives in a monorepo subdir
                         -- generate = true,     -- only if the repo lacks a pre-generated src/parser.c
-                        -- queries = "queries", -- install highlight queries from the repo (for syntax highlighting)
+                        queries = "queries", -- install highlight queries from the repo (for highlighting)
                     },
                     tier = 3,
                 }
