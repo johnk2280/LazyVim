@@ -61,6 +61,7 @@ return {
             "vue",
             "yaml",
             "brief",
+            "go",
         },
     },
 }
