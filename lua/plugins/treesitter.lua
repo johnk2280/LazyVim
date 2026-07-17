@@ -33,6 +33,11 @@ return {
             "typescript",
             "vue",
             "yaml",
+            "go",
+            "gomod",
+            "gowork",
+            "gosum",
+            "make",
         },
     },
 }
