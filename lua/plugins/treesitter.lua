@@ -62,6 +62,10 @@ return {
             "yaml",
             "brief",
             "go",
+            "gomod", -- go.mod
+            "gosum", -- go.sum
+            "gowork", -- go.work
+            "gotmpl", -- Go templates
         },
     },
 }
